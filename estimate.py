@@ -1,6 +1,12 @@
 import math
 import unittest
 
+def wallis(n):
+    sum = 1
+    for x in range(1, n+1):
+        sum *= 4*x*x/(4*x*x-1)
+    return 2*sum
+
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
